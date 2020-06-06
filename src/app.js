@@ -3,6 +3,7 @@ const path = require('path')
 const hbs = require('hbs')
 
 const app = express()
+const port = process.env.PORT
 
 const viewspath = path.join(__dirname, '../templates/views')
 
@@ -29,6 +30,6 @@ app.get('/help', (req, res) => {
 })
 
 
-app.listen(3000, () => {
-    console.log('The servr is up and running')
+app.listen(port, () => {
+    console.log('The servr is up and ' + port)
 })
